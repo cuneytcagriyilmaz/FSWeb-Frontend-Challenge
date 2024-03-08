@@ -1,0 +1,32 @@
+.skills{
+    margin-top: 2rem;
+}
+.skills-container {
+    display: flex;
+}
+
+.skill {
+    flex: 1;
+    margin-right: 10rem; 
+}
+
+.skills-title {
+    color: #1F2937;
+    font-weight: 600; 
+    font-size: 48px;
+}
+
+.skill-title {
+    color: #4338CA;
+    font-weight: 500; 
+    font-size: 30px;
+}
+
+.skill-description {
+    color: #6B7280;
+    font-weight: 400; 
+    font-size: 12px;
+}
+.skill:last-child {
+    margin-right: 0; 
+}
