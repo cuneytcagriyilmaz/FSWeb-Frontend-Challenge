@@ -11,15 +11,17 @@ import Footer from './coponents/footer/Footer'
 function App() {
 
   return (
-    <div className='main-container'>
-      <Mode />
-      <Header />
-      <Hero />
-      <Skills />
-      <Profile />
-      <Projects />
+    <>
+      <div className='main-container'>
+        <Mode />
+        <Header />
+        <Hero />
+        <Skills />
+        <Profile />
+        <Projects />
+      </div>
       <Footer />
-    </div>
+    </>
   )
 }
 
