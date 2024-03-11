@@ -30,3 +30,15 @@
 .skill:last-child {
     margin-right: 0; 
 }
+
+@media (max-width: 768px) {
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill {
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+}

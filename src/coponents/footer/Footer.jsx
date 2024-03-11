@@ -7,7 +7,7 @@ function Footer() {
       <h2 className="footer-title">Let’s work together on your next product.</h2>
       <div className="contact-info">
         <div className="email-footer">
-          <span>almilasucode@gmail.com</span>
+          <span>👉cuneytcagriyilmaz@gmail.com</span>
         </div>
         <div className="links">
           <a href="#">Personal Blog</a>
