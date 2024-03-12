@@ -1,6 +1,5 @@
 import React, {useContext} from 'react';
 import './skills.css';
-import skillsData from '../../data/SkillsData';
 import { DataContext } from "../../context/DataContext";
 
 
@@ -10,9 +9,9 @@ function Skills() {
 
     return (
         <div className='skills'>
-            <h1 className="skills-title">Skills</h1>
+            <h1 className="skills-title">{content.skill}</h1>
             <div className="skills-container">
-                {skillsData.map((skill, index) => (
+                {content.skillsData.map((skill, index) => (
                     <div key={index} className="skill">
                         <h2 className="skill-title">{skill.title}</h2>
                         <p className="skill-description">{skill.description}</p>

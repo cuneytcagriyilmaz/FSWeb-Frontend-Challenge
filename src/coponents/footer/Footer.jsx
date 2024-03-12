@@ -1,25 +1,56 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import './footer.css';
-import footerData from '../../data/FooterData';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { DataContext } from "../../context/DataContext";
-
-
+import axios from 'axios';
 
 function Footer() {
   const { content } = useContext(DataContext);
+  const [footerFetchData, setfooterFetchData] = useState(null);
+
+  useEffect(() => {
+    axios.get('https://65f0bacdda8c6584131c58e0.mockapi.io/footer')
+      .then(response => {
+        setfooterFetchData(response.data);
+        toast.success('Footer data loaded successfully');
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error);
+        toast.error('Failed to fetch footer data');
+      });
+  }, []);
+
+  if (!footerFetchData) {
+    return null;
+  }
+
+  const footerValue = footerFetchData[0];
 
   return (
     <div className="footer-container">
-      <h2 className="footer-title">{content.footerSection.main}
-      </h2>
+      <ToastContainer
+        position="bottom-center"
+        autoClose={1500}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+        transition:Flip
+      />
+      <h2 className="footer-title">{content.footerSection.main}</h2>
       <div className="contact-info">
         <div className="email-footer">
-          <a href="mailto:cuneytcagriyilmaz@gmail.com">{footerData.email}</a>
+          <a href="mailto:cuneytcagriyilmaz@gmail.com">{footerValue.email}</a>
         </div>
         <div className="links">
-          <a href={footerData.personalBlogLink}>Personal Blog</a>
-          <a href={footerData.githubLink}>Github</a>
-          <a href={footerData.linkedinLink}>Linkedin</a>
+          <a href={footerValue.personalBlogLink}>Personal Blog</a>
+          <a href={footerValue.githubLink}>Github</a>
+          <a href={footerValue.linkedinLink}>Linkedin</a>
         </div>
       </div>
     </div>

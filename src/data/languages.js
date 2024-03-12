@@ -4,6 +4,7 @@ export const languages = {
     description:
       " Hi, I’m Cagri. I’m a full-stack developer. If you are looking for a Developer who to craft solid and scalable frontend products withgreat user experiences. Let’s shake hands with me.",
     profile: "Profile",
+    skill:"Skills",
     aboutSection: {
       section: "About Me",
       name: "Cüneyt Çağrı YILMAZ",
@@ -15,7 +16,7 @@ export const languages = {
       education: {
         uni: "Antalya Bilim Uni. Electrical Electornics Engineering",
         type: "Bachelor's degree",
-        year: "2016",
+        year: "2022",
       },
       role: "Full-Stack Java Developer",
       roleTitle: "Preferred Role",
@@ -60,12 +61,27 @@ export const languages = {
         viewSiteLink: "#"
       }
     ],
+    skillsData: [
+      {
+        title: "JavaScript",
+        description: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      },
+      {
+        title: "React.Js",
+        description: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      },
+      {
+        title: "Node.Js",
+        description: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      }
+    ],
   },
   tr: {
     title: "Yaratıcı Düşünür, minimalist sever",
     description:
       "Merhaba, ben Çağrı. Full-Stack geliştiriciyim. Harika kullanıcı deneyimleri ile sağlam ve ölçeklenebilir ön uç ürünleri oluşturacak bir geliştirici arıyorsanız. Benimle iletişime geçebilirsiniz.",
     profile: "Profil",
+    skill:"Yetenekler",
     aboutSection: {
       section: "Hakkımda",
       name: "Cüneyt Çağrı YILMAZ",
@@ -116,6 +132,20 @@ export const languages = {
         technologies: ["React", "Redux", "Axios"],
         githubLink: "#",
         viewSiteLink: "#"
+      }
+    ],
+    skillsData: [
+      {
+        title: "JavaScript",
+        description: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      },
+      {
+        title: "React.Js",
+        description: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      },
+      {
+        title: "Node.Js",
+        description: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
       }
     ],
   },
