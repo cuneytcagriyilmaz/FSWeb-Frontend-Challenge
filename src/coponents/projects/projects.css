@@ -1,6 +1,9 @@
 .section-container {
-    margin-bottom: 8rem;
-    border-top: 2px solid #BAB2E7;
+    margin-bottom: 6rem;
+    /* border-top: 2px solid #BAB2E7; */
+    padding: 0 15% 0 12.08%;
+    background-color: white;
+
 
 
 }
@@ -10,6 +13,8 @@
     margin-bottom: 10px;
     font-size: 36px;
     text-align: center;
+    border-top: 2px solid #BAB2E7;
+    margin-top: 2rem;
 
 }
 

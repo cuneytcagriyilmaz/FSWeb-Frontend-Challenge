@@ -1,11 +1,16 @@
 
-import React from "react";
+import React, { useContext } from "react";
 import './profile.css'
+import { DataContext } from "../../context/DataContext";
+
+
 function Profile() {
+    const { content } = useContext(DataContext);
+
     return (
         <div className="header-profile mt-[42px]" id="profile">
-            <h1 className="text-title font-semibold mb-[10px] text-[36px] text-center md:text-[48px] md:text-left ">
-                Profile
+            <h1 className="profile-h1 text-title font-semibold mb-[10px] text-[36px] text-center md:text-[48px] md:text-left ">
+                {content.profile}
             </h1>
             <div
                 className="profile-container flex text-primary flex-wrap  justify-center md:justify-start "
@@ -13,7 +18,7 @@ function Profile() {
             >
                 <div className="basis-full md:basis-1/2 tracking-[1%]">
                     <span className="text-blue-600 font-medium text-3xl flex justify-center md:justify-start">
-                        Profile
+                        {content.profile}
                     </span>
 
                     <div
@@ -21,32 +26,35 @@ function Profile() {
                         className="grid grid-cols-2 mt-[21px] text-[#000] dark:text-text"
                     >
                         <div className=" grid grid-rows-5 font-semibold place-content-center md:place-content-start">
-                            <p>Birthday</p>
-                            <p>City</p>
-                            <p>Education</p>
+                            <p>{content.aboutSection.bdaytitle}</p>
+                            <p>{content.aboutSection.cityTitle}</p>
+                            <p>{content.aboutSection.educationTitle}</p>
                             <br />
-                            <p>Preffered Role</p>
+                            <p>{content.aboutSection.roleTitle}</p>
                         </div>
                         <div className=" grid grid-rows-5 md:basis-1/2 place-content-center md:place-content-start">
-                            <p>22.05.1998</p>
-                            <p>Antalya</p>
-                            <p>Antalya Bilim Uni. Electrical Electronics Engineering</p>
+                            <p>{content.aboutSection.bday}</p>
+                            <p>{content.aboutSection.city}</p>
+                            <p>{content.aboutSection.education.uni}</p>
                             <p>
-                                Bachelor's degree -
-                                2022
+                                {content.aboutSection.education.type} -
+                                {content.aboutSection.education.year}
                             </p>
-                            <p>Full-Stack Java Developer</p>
+                            <p>{content.aboutSection.role}</p>
+
                         </div>
                     </div>
                 </div>
                 <div className="basis-full md:basis-1/2 tracking-[1%]">
-                    <span className="text-blue-600 font-medium text-3xl flex justify-center md:justify-start">
-                        About Me
+                    <span className="text-blue-600 font-medium text-3xl flex justify-center md:justify-start ">
+                        {content.aboutSection.section}
                     </span>
 
                     <div className="text-text space-y-4">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.</p>
-                        <p>Mnima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam! </p>
+                        {content.aboutSection.aboutMe.map((paragraph, index) => (
+                            <p key={index}>{paragraph}</p>
+                        ))}
+
                     </div>
                 </div>
             </div>

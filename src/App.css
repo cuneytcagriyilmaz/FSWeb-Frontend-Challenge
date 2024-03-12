@@ -1,8 +1,11 @@
-.main-container{
-    /* padding: 2% 8.75% 5% 12.08%; */
+.main-container {
     padding: 2% 15% 5% 12.08%;
-    /* background-color: #F5F5F5; */
     background-color: white;
-    /* max-width: 1440px; */
 
+}
+
+.dark-mode .main-container {
+    background-color: #383838;
+    padding: 2% 15% 5% 12.08%;
+    color: #ffffff;
 }

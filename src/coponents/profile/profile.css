@@ -1,6 +1,12 @@
 .header-profile {
+    /* margin-top: 2rem; */
+    /* margin-bottom: 3rem; */
+    padding: 0 15% 0 12.08%;
+    background-color: white;    
+}
+
+
+.profile-h1{
     border-top: 2px solid #BAB2E7;
-    margin-top: 2rem;
-    margin-bottom: 3rem;
-    
+    padding-top: 2rem;
 }

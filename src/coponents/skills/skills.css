@@ -1,5 +1,7 @@
 .skills{
     margin-top: 2rem;
+    padding: 0 15% 0 12.08%;
+    background-color: white;
 }
 .skills-container {
     display: flex;

@@ -1,3 +1,8 @@
+.mode-container {
+    padding: 2% 15% 0 12.08%;
+    background-color: white;
+}
+
 #checkbox {
     position: relative;
     appearance: none;
@@ -6,10 +11,6 @@
     border-radius: 100px;
     background: #4731d3;
     cursor: pointer;
-}
-
-#checkbox:checked {
-    background: #000000;
 }
 
 #checkbox::before {
@@ -27,8 +28,25 @@
     position: absolute;
     right: calc(100% + 20px);
     border-radius: 100px;
+    background: #12121b;
+
+
 }
+
+.lang-handler-div {
+    color: #777777;
+}
+
+.lang-handler-span {
+    color: #4731D3;
+}
+
 
 #checkbox:checked::before {
     left: calc(100% - 22px);
+}
+
+.dark-mode {
+    background-color: #1f1f1f;
+    color: #ffffff;
 }

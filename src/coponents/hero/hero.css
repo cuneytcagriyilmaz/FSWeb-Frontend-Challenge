@@ -2,6 +2,8 @@
     display: flex;
     margin-top: 5rem;
     flex-direction: column-reverse;
+    padding: 2% 15% 5% 12.08%;
+    background-color: white;
 }
 
 .left-section {
@@ -83,10 +85,12 @@
     margin-right: 0.5rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 911px) {
 
     .hero-container {
         flex-direction: row;
+        padding: 2% 15% 5% 12.08%;
+        background-color: white;
     }
 
     .left-section {
@@ -101,9 +105,8 @@
 
     .hero-photo {
         border-radius: 1.125rem;
-        width: 29.75rem;
+        width: 25.75rem;
         height: 23.4375rem;
-        border: none;
         background-color: #fff;
     }
 }
