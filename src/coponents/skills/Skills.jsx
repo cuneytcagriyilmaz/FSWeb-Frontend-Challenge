@@ -10,7 +10,7 @@ function Skills() {
     return (
 
         <div className={`skills ${theme === 'dark' ? 'skills-dark' : ''}`}>
-        <h1 className={`skills-title ${theme === 'dark' ? 'skills-title-dark' : ''}`}>
+        <h1 id='skills' className={`skills-title ${theme === 'dark' ? 'skills-title-dark' : ''}`}>
             {content.skill}</h1>
             <div className="skills-container">
                 {content.skillsData.map((skill, index) => (

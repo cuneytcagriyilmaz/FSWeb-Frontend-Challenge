@@ -7,7 +7,7 @@ function Projects() {
 
     return (
         <section id="projects" className={`section-container ${theme === 'dark' ? 'section-container-dark' : ''}`}>
-            <h1 className={`projects-header-h1 ${theme === 'dark' ? 'projects-header-h1-dark' : ''}`}>Projeler</h1>
+            <h1 className={`projects-header-h1 ${theme === 'dark' ? 'projects-header-h1-dark' : ''}`}>{content.projects}</h1>
             <div className="projects-container">
                 {content.projectsData.map((project, index) => (
                     <div key={index} className="project">

@@ -66,11 +66,12 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    align-items: center;
 }
 
 .button-container-hero button {
     padding: 1.5rem;
-    max-width: 10.75rem;
+    width: 10.75rem;
     margin-top: 1rem;
     justify-content: center;
 
@@ -88,7 +89,7 @@
 }
 
 .hero-photo {
-    border-radius: 30%;
+    border-radius: 50%;
     margin-bottom: 1rem;
     box-shadow: 0 2.5rem 3.75rem rgba(0, 0, 0, 0.1);
 }
@@ -105,6 +106,8 @@
     padding: 0.5rem 1.5rem;
     display: flex;
     align-items: center;
+    width: 140px;
+    height: 52px;
 }
 
 .hire-button-dark,

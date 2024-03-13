@@ -48,7 +48,6 @@ function Footer() {
           <a href="mailto:cuneytcagriyilmaz@gmail.com">{footerValue.email}</a>
         </div>
         <div className={`links ${theme === 'dark' ? 'links-dark' : ''}`}>
-        {/* <div className="links"> */}
           <a href={footerValue.personalBlogLink}>Personal Blog</a>
           <a href={footerValue.githubLink}>Github</a>
           <a href={footerValue.linkedinLink}>Linkedin</a>

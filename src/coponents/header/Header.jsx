@@ -15,7 +15,7 @@ function Header() {
             </div>
             <div className={`navigation-bar ${theme === 'dark' ? 'navigation-bar-dark' : ''}`}>
                 {navigationLinks.map((link, index) => (
-                    <a key={index} href="#">{link}</a>
+                    <a key={index} href={`#${link.toLowerCase()}`}>{link}</a>
                 ))}
             </div>
         </nav>

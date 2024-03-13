@@ -24,11 +24,18 @@ function Hero() {
                     {content.description}</p>
                 <div className="button-container-hero">
                     <button className={`hire-button ${theme === 'dark' ? 'hire-button-dark' : ''}`}>
-                        {content.headerData.navigationLinks[2]}</button>
-                    <button className={`github-button ${theme === 'dark' ? 'github-button-dark' : ''}`}>
-                        <img src={GithubLogo} alt="Github Logo" />Github</button>
-                    <button className={`linkedIn-button ${theme === 'dark' ? 'linkedIn-button-dark' : ''}`}>
-                        <img src={LinkedInLogo} alt="Linkedin Logo" />Linkedin</button>
+                        {content.headerData.navigationLinks[2]}
+                    </button>
+
+                    <a href="https://github.com/cuneytcagriyilmaz" target="_blank">
+                        <button className={`github-button ${theme === 'dark' ? 'github-button-dark' : ''}`}>
+                            <img src={GithubLogo} alt="Github Logo" />Github
+                        </button>
+                    </a>
+                    <a href="https://www.linkedin.com/in/cuneytcagriyilmaz/" target="_blank">
+                        <button className={`linkedIn-button ${theme === 'dark' ? 'linkedIn-button-dark' : ''}`}>
+                            <img src={LinkedInLogo} alt="Linkedin Logo" />Linkedin</button>
+                    </a>
                 </div>
             </div>
             <div className="right-section">

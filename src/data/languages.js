@@ -1,10 +1,15 @@
+import favFilmProject from '../assests/favFilmProject.png';
+import filmProject from '../assests/filmProject.png';
+import pizza from '../assests/pizza.png';
+
 export const languages = {
   en: {
     title: "Creative Thinker, Minimalism Lover",
     description:
       " Hi, I’m Cagri. I’m a full-stack developer. If you are looking for a Developer who to craft solid and scalable frontend products withgreat user experiences. Let’s shake hands with me.",
     profile: "Profile",
-    skill:"Skills",
+    skill: "Skills",
+    projects: "Projects",
     aboutSection: {
       section: "About Me",
       name: "Cüneyt Çağrı YILMAZ",
@@ -36,25 +41,25 @@ export const languages = {
       {
         id: 1,
         title: "Workintech",
-        imageUrl: "https://picsum.photos/300/180",
+        imageUrl: favFilmProject,
         description: "A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.",
         technologies: ["React", "Redux", "Axios"],
-        githubLink: "#",
-        viewSiteLink: "#"
+        githubLink: "https://github.com/cuneytcagriyilmaz/fsweb-s10g3-redux-watchlist-solution",
+        viewSiteLink: "https://cuneytcagriyilmaz-fsweb-s10g3-redux-watchlist-solution-chi.vercel.app/"
       },
       {
         id: 2,
         title: "Workintech",
-        imageUrl: "https://picsum.photos/300/180",
+        imageUrl: filmProject,
         description: "A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.",
         technologies: ["React", "Redux", "Axios"],
-        githubLink: "#",
-        viewSiteLink: "#"
+        githubLink: "https://github.com/cuneytcagriyilmaz/fsweb-s10g2-redux-filmler-solution",
+        viewSiteLink: "https://cuneytcagriyilmaz-fsweb-s10g2-redux-filmler-solution-eight.vercel.app/movies"
       },
       {
         id: 3,
         title: "Workintech",
-        imageUrl: "https://picsum.photos/300/180",
+        imageUrl: pizza,
         description: "A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.",
         technologies: ["React", "Redux", "Axios"],
         githubLink: "#",
@@ -81,7 +86,8 @@ export const languages = {
     description:
       "Merhaba, ben Çağrı. Full-Stack geliştiriciyim. Harika kullanıcı deneyimleri ile sağlam ve ölçeklenebilir ön uç ürünleri oluşturacak bir geliştirici arıyorsanız. Benimle iletişime geçebilirsiniz.",
     profile: "Profil",
-    skill:"Yetenekler",
+    skill: "Yetenekler",
+    projects: "Projeler",
     aboutSection: {
       section: "Hakkımda",
       name: "Cüneyt Çağrı YILMAZ",
@@ -109,25 +115,25 @@ export const languages = {
       {
         id: 1,
         title: "Workintech",
-        imageUrl: "https://picsum.photos/300/180",
+        imageUrl: favFilmProject,
         description: "Kullanıcılarınızın hangi çerezleri kabul edeceğini veya reddedeceğini seçmesine olanak tanıyan basit, özelleştirilebilir, minimum kurulum çerez eklentisi. Bu, Vanilla JS, SCSS ve Parcel Bundler ile oluşturulmuştur ve bir NPM paketi olarak mevcuttur ve git deposu her türlü özelleştirmeyi yapar kodlama ve temalar mümkün.",
         technologies: ["React", "Redux", "Axios"],
-        githubLink: "#",
-        viewSiteLink: "#"
+        githubLink: "https://github.com/cuneytcagriyilmaz/fsweb-s10g3-redux-watchlist-solution",
+        viewSiteLink: "https://cuneytcagriyilmaz-fsweb-s10g3-redux-watchlist-solution-chi.vercel.app/"
       },
       {
         id: 2,
         title: "Workintech",
-        imageUrl: "https://picsum.photos/300/180",
+        imageUrl: filmProject,
         description: "Kullanıcılarınızın hangi çerezleri kabul edeceğini veya reddedeceğini seçmesine olanak tanıyan basit, özelleştirilebilir, minimum kurulum çerez eklentisi. Bu, Vanilla JS, SCSS ve Parcel Bundler ile oluşturulmuştur ve bir NPM paketi olarak mevcuttur ve git deposu her türlü özelleştirmeyi yapar kodlama ve temalar mümkün.",
         technologies: ["React", "Redux", "Axios"],
-        githubLink: "#",
-        viewSiteLink: "#"
+        githubLink: "https://github.com/cuneytcagriyilmaz/fsweb-s10g2-redux-filmler-solution",
+        viewSiteLink: "https://cuneytcagriyilmaz-fsweb-s10g2-redux-filmler-solution-eight.vercel.app/movies"
       },
       {
         id: 3,
         title: "Workintech",
-        imageUrl: "https://picsum.photos/300/180",
+        imageUrl: pizza,
         description: "Kullanıcılarınızın hangi çerezleri kabul edeceğini veya reddedeceğini seçmesine olanak tanıyan basit, özelleştirilebilir, minimum kurulum çerez eklentisi. Bu, Vanilla JS, SCSS ve Parcel Bundler ile oluşturulmuştur ve bir NPM paketi olarak mevcuttur ve git deposu her türlü özelleştirmeyi yapar kodlama ve temalar mümkün.",
         technologies: ["React", "Redux", "Axios"],
         githubLink: "#",

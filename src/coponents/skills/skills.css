@@ -1,6 +1,10 @@
 .skills {
     padding: 2rem 15% 0 12.08%;
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
 }
 
 .skills-dark {
@@ -43,7 +47,7 @@
     font-size: 12px;
 }
 
-.skill-description-dark{
+.skill-description-dark {
     color: white;
 }
 
@@ -52,13 +56,24 @@
 }
 
 @media (max-width: 768px) {
+    .skills {
+        align-items: center;
+
+    }
+
     .skills-container {
+        display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
     }
 
     .skill {
         margin-right: 0;
         margin-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 }
