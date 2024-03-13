@@ -1,96 +1,38 @@
-// import React, { useState, useEffect } from "react";
-// import "./mode.css";
 
-// function Mode() {
-//   const [isDarkMode, setIsDarkMode] = useState(
-//     localStorage.getItem("isDarkMode") === "true"
-//   );
-
-//   useEffect(() => {
-//     localStorage.setItem("isDarkMode", isDarkMode);
-//     if (isDarkMode) {
-//       document.body.classList.add("dark-mode");
-//     } else {
-//       document.body.classList.remove("dark-mode");
-//     }
-//   }, [isDarkMode]);
-
-//   const handleCheckboxChange = () => {
-//     setIsDarkMode(!isDarkMode);
-//   };
-
-//   return (
-//     <div className="flex flex-row items-center justify-center sm:justify-end mt-6 text-text ">
-//       <div className="block">
-//         <label htmlFor="checkbox" className="flex items-center cursor-pointer">
-//           <div className="relative mr-2">
-//             <input
-//               type="checkbox"
-//               id="checkbox"
-//               className="sr-only"
-//               checked={isDarkMode}
-//               onChange={handleCheckboxChange}
-//             />
-//           </div>
-//         </label>
-//       </div>
-
-//       <div>
-//         <div className="sm:hidden cursor-pointer">
-//           "EN" : "TR"
-//         </div>
-//         <div className="hidden sm:inline-block">
-//           MOD |
-//           <span
-//             className="cursor-pointer text-primary font-bold"
-//           >
-//             {isDarkMode ? "Dark Mode" : "Light Mode"}
-//           </span>
-//           YE GEÇ
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default Mode;
-
-
-
-
-
-
-import React, { useState, useEffect, useContext } from "react";
+import React, { useContext } from "react";
 import "./mode.css";
 import { DataContext } from "../../context/DataContext";
 
 
 function Mode() {
 
-  const { langHandler, langPre } = useContext(DataContext);
+  const { langHandler, langPre, toggleTheme, theme } = useContext(DataContext);
 
   return (
-    <div className="mode-container flex flex-row items-center justify-center sm:justify-end mt-6 text-text">
+    <div className={`mode-container ${theme === 'dark' ? 'mode-container-dark' : ''}`}>
       <div className="block">
-        <label htmlFor="checkbox" className="flex items-center cursor-pointer">
-          <div className="relative mr-2">
+        <label htmlFor="checkbox" className="toggle-theme">
+          <div className="toggle-theme-checkbox">
             <input
               type="checkbox"
               id="checkbox"
+              onChange={toggleTheme}
+              checked={theme === 'dark'}
             />
           </div>
-          | 
+
         </label>
       </div>
 
       <div>
-        <div className="lang-handler-div font-bold">
-          
+        <div className="lang-handler-div">
+          {theme === "dark" ? "LIGTH MODE " : "DARK MODE "}
+
           <span
-            className="cursor-pointer font-bold lang-handler-span"
+            className={`lang-handler-span ${theme === 'dark' ? 'lang-handler-span-dark' : ''}`}
             onClick={langHandler}
           >
-            {langPre === "en" ? "TÜRKÇE" : "İNGİLİZCE"}
+            |  {langPre === "en" ? " TÜRKÇE" : " İNGİLİZCE"}
           </span>
           'YE GEÇ
         </div>

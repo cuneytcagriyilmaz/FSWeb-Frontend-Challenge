@@ -6,7 +6,7 @@ import { DataContext } from "../../context/DataContext";
 import axios from 'axios';
 
 function Footer() {
-  const { content } = useContext(DataContext);
+  const { content, theme } = useContext(DataContext);
   const [footerFetchData, setfooterFetchData] = useState(null);
 
   useEffect(() => {
@@ -28,7 +28,7 @@ function Footer() {
   const footerValue = footerFetchData[0];
 
   return (
-    <div className="footer-container">
+    <div className={`footer-container ${theme === 'dark' ? 'footer-container-dark' : ''}`}>
       <ToastContainer
         position="bottom-center"
         autoClose={1500}
@@ -42,12 +42,13 @@ function Footer() {
         theme="colored"
         transition:Flip
       />
-      <h2 className="footer-title">{content.footerSection.main}</h2>
+      <h2 className={`footer-title ${theme === 'dark' ? 'footer-title-dark' : ''}`}>{content.footerSection.main}</h2>
       <div className="contact-info">
-        <div className="email-footer">
+        <div className={`email-footer ${theme === 'dark' ? 'email-footer-dark' : ''}`}>
           <a href="mailto:cuneytcagriyilmaz@gmail.com">{footerValue.email}</a>
         </div>
-        <div className="links">
+        <div className={`links ${theme === 'dark' ? 'links-dark' : ''}`}>
+        {/* <div className="links"> */}
           <a href={footerValue.personalBlogLink}>Personal Blog</a>
           <a href={footerValue.githubLink}>Github</a>
           <a href={footerValue.linkedinLink}>Linkedin</a>

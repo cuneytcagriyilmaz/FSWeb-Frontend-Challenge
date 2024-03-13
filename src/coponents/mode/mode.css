@@ -1,52 +1,83 @@
-.mode-container {
-    padding: 2% 15% 0 12.08%;
-    background-color: white;
-}
+ .mode-container {
+     padding: 2% 15% 0 12.08%;
+     background-color: white;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: center;
+ }
 
-#checkbox {
-    position: relative;
-    appearance: none;
-    width: 55px;
-    height: 24px;
-    border-radius: 100px;
-    background: #4731d3;
-    cursor: pointer;
-}
+ .mode-container-dark {
+     background-color: #211E23;
 
-#checkbox::before {
-    content: "";
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    border-radius: 100px;
-    width: 20px;
-    height: 20px;
-    background: #ffe86e;
-}
+ }
 
-#checkbox::after {
-    position: absolute;
-    right: calc(100% + 20px);
-    border-radius: 100px;
-    background: #12121b;
+ #checkbox {
+     position: relative;
+     appearance: none;
+     width: 3.438rem;
+     height: 1.5rem;
+     border-radius: 100px;
+     background: #4731d3;
+     cursor: pointer;
+ }
 
+ #checkbox::before {
+     content: "";
+     position: absolute;
+     top: 0.125rem;
+     left: 0.125rem;
+     border-radius: 100px;
+     width: 1.25rem;
+     height: 1.25rem;
+     background: #ffe86e;
+ }
 
-}
+ #checkbox::after {
+     position: absolute;
+     right: calc(100% + 1.25rem);
+     border-radius: 100px;
+     background: #12121b;
+ }
 
-.lang-handler-div {
-    color: #777777;
-}
+ .lang-handler-div {
+     color: #777777;
+     font-weight: bold;
+ }
 
-.lang-handler-span {
-    color: #4731D3;
-}
+ .lang-handler-span {
+     color: #4731d3;
+     font-weight: bold;
+     cursor: pointer;
+ }
 
+ .lang-handler-span-dark {
+     color: #BAB2E7;
+     font-weight: bold;
+     cursor: pointer;
+ }
 
-#checkbox:checked::before {
-    left: calc(100% - 22px);
-}
+ .toggle-theme {
+     display: flex;
+     align-items: center;
+     cursor: pointer;
+ }
 
-.dark-mode {
-    background-color: #1f1f1f;
-    color: #ffffff;
-}
+ .toggle-theme-checkbox {
+     position: relative;
+     margin-right: 0.313rem;
+
+ }
+
+ 
+
+ #checkbox:checked::before {
+     left: calc(100% - 22px);
+ }
+
+ @media (min-width: 768px) {
+     .mode-container {
+         justify-content: flex-end;
+     }
+
+ }

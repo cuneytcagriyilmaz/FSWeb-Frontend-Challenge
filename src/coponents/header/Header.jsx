@@ -5,15 +5,15 @@ import { DataContext } from "../../context/DataContext";
 
 
 function Header() {
-    const { content } = useContext(DataContext);
+    const { content, theme } = useContext(DataContext);
     const navigationLinks = content?.headerData?.navigationLinks || [];
 
     return (
-        <nav className="header-container">
-            <div className="custom-container">
+        <nav className={`header-container ${theme === 'dark' ? 'header-container-dark' : ''}`}>
+            <div className={`custom-container ${theme === 'dark' ? 'custom-container-dark' : ''}`}>
                 <a>{content?.headerData?.logoText}</a>
             </div>
-            <div className="navigation-bar">
+            <div className={`navigation-bar ${theme === 'dark' ? 'navigation-bar-dark' : ''}`}>
                 {navigationLinks.map((link, index) => (
                     <a key={index} href="#">{link}</a>
                 ))}

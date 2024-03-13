@@ -11,12 +11,10 @@ import { DataContext } from "./context/DataContext";
 import { languages } from "./data/languages";
 
 function App() {
+
   const storedLang = localStorage.getItem("lang");
   const defaultLang = storedLang ? storedLang : "en";
   const [langPre, setLangPre] = useState(defaultLang);
-  
-
-
   const langHandler = () => {
     const newLang = langPre === "en" ? "tr" : "en";
     setLangPre(newLang);
@@ -31,16 +29,33 @@ function App() {
     }
   }, [storedLang, defaultLang]);
 
+
+  const [theme, setTheme] = useState(() => {
+    const storedTheme = localStorage.getItem('theme');
+    return storedTheme || 'light';
+  });
+
+  const toggleTheme = () => {
+    setTheme(prevTheme => (prevTheme === 'light' ? 'dark' : 'light'));
+  };
+
+  useEffect(() => {
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+
+
   const data = {
     content,
     contentProjects,
     langHandler,
     langPre,
+    theme, 
+    toggleTheme,
   };
 
   return (
     <DataContext.Provider value={data}>
-
       <Mode />
       <Header />
       <Hero />

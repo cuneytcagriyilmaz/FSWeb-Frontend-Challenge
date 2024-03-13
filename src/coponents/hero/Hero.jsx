@@ -9,22 +9,30 @@ import { DataContext } from "../../context/DataContext";
 
 function Hero() {
 
-    const { content } = useContext(DataContext);
+    const { content, theme } = useContext(DataContext);
 
     return (
-        <div className="hero-container">
+        <div className={`hero-container ${theme === 'dark' ? 'hero-container-dark' : ''}`}>
+
             <div className="left-section">
-                <p className="hero-name font-bold">{content.aboutSection.name}</p>
-                <h1 className="hero-h1">{content.title}</h1>
-                <p className="left-section-info">{content.description}</p>
+                <p className={`hero-name ${theme === 'dark' ? 'hero-name-dark' : ''}`}>
+                    {content.aboutSection.name}
+                </p>
+                <h1 className={`hero-h1 ${theme === 'dark' ? 'hero-h1-dark' : ''}`}
+                >{content.title}</h1>
+                <p className={`left-section-info ${theme === 'dark' ? 'left-section-info-dark' : ''}`}>
+                    {content.description}</p>
                 <div className="button-container-hero">
-                    <button className="hire-button">{content.headerData.navigationLinks[2]}</button>
-                    <button className="github-button"> <img src={GithubLogo} alt="Github Logo" />Github</button>
-                    <button className="linkedIn-button"> <img src={LinkedInLogo} alt="Linkedin Logo" />Linkedin</button>
+                    <button className={`hire-button ${theme === 'dark' ? 'hire-button-dark' : ''}`}>
+                        {content.headerData.navigationLinks[2]}</button>
+                    <button className={`github-button ${theme === 'dark' ? 'github-button-dark' : ''}`}>
+                        <img src={GithubLogo} alt="Github Logo" />Github</button>
+                    <button className={`linkedIn-button ${theme === 'dark' ? 'linkedIn-button-dark' : ''}`}>
+                        <img src={LinkedInLogo} alt="Linkedin Logo" />Linkedin</button>
                 </div>
             </div>
             <div className="right-section">
-                <img className='hero-photo' src="/Cagri.jpg" />
+                <img className={`hero-photo ${theme === 'dark' ? 'hero-photo-dark' : ''}`} src="/Cagri.jpg" />
             </div>
         </div>
     );
