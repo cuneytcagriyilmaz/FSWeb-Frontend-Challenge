@@ -6,6 +6,7 @@ import { DataContext } from "../../context/DataContext";
 
 function Skills() {
     const { content, theme } = useContext(DataContext);
+    console.log(content)
 
     return (
 
